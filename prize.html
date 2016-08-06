@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!--禁止IOS识别号码 -->
+    <meta content="email=no" name="format-detection"/>
+    <script type="text/javascript">
+    (function (doc, win) {
+    var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+        window.clientWidth = docEl.clientWidth;
+        if (!window.clientWidth) return;
+        docEl.style.fontSize = 40 * (window.clientWidth / 640) + 'px';
+        window.base = 40 * (window.clientWidth / 640);
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    if (document.documentElement.clientWidth/document.documentElement.clientHeight>0.66) {
+     document.documentElement.style.height=document.documentElement.clientWidth/0.62+ 'px';
+      document.documentElement.style.overflow="auto";
+
+     }
+    </script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/prize.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+    <div id="container">
+        <div class="page" id="prize">
+            <div class="inner">
+                <div class="join-btn"></div>
+            </div>
+        </div>
+        <div class="page" id="login" style="display:none">
+            <div class="inner">
+                <div class="title">
+                    <img src="images/login_title.png" alt="" />
+                </div>
+                <div class="content">
+                    <h3>成为滴滴车主，开启惊喜旅程</h3>
+                    <form class="login-form">
+                        <p>
+                            <input type="tel" name="name" placeholder="请输入您的手机号码">
+                            <span>验证</span>
+                        </p>
+                        <p>
+                            <input type="num" name="name" placeholder="验证码">
+                        </p>
+                        <p>
+                            <button class="btn-login">我有车，我要成为快车车主</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="footer">
+                    <p>©2015 北京小桔科技有限公司 京ICP备12043664号-4</p>
+                    <p>联系电话 010-62682929</p>
+                    <p>点击“我有车，我要成为快车车主”代表已同意<a href="#law">法律声明和隐私政策</a></p>
+                </div>
+
+            </div>
+        </div>
+        <div class="page" id="law">
+            <div class="inner">
+                法律
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="lib/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/prize.js"></script>
+<script type="text/javascript">
+// 测试
+$('#prize').hide();
+$('#login').show();
+</script>
+</html>
